@@ -159,7 +159,7 @@ public class NSCarouselView: UIView {
             CATransaction.setAnimationDuration(0)
             
             if(animDur != 0) {
-                UIView.animate(withDuration: 0.5) {
+                UIView.animate(withDuration: animDur) {
                     layer.transform = transform
                     self.layoutSubviews()
                 }
@@ -189,7 +189,7 @@ public class NSCarouselView: UIView {
         
         if recognizer.state == .ended || recognizer.state == .cancelled || recognizer.state == .failed {
             
-            animDuration = 0.3
+            animDuration = 0.5
             
             var addedValue:CGFloat = velocity < 0 ? -segmentLength : segmentLength
             
