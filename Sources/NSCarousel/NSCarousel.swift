@@ -185,7 +185,7 @@ public class NSCarouselView: UIView {
         let xOffset = (speedingFactor) * recognizer.translation(in: self).x
         let velocity = recognizer.velocity(in: self).x
         
-        guard xOffset < 10000000 || xOffset < -1000000 else { return }
+        guard xOffset < 10000000 && xOffset > -1000000 else { return }
         
         if recognizer.state == .ended || recognizer.state == .cancelled || recognizer.state == .failed {
             
