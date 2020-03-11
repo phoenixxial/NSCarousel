@@ -1,3 +1,5 @@
 # NSCarousel
 
-A description of this package.
+iOS 3D Carousel.
+
+Documentation: Coming soon...
